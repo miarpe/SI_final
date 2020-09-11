@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+<!--AQ 1-->
+		<category>
+			<pattern>Hablame un poco de ti</pattern>
+			<template>Soy un alumno de la ESEI y me gustan los deportes además de practicar futbol al aire libre.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>hablar</set> * ti ^</pattern>
+		    <template><srai>Hablame un poco de ti</srai></template>
+		</category>
+
+<!--AQ 2-->
+		<category>
+			<pattern>Donde vives durante el curso</pattern>
+			<template>Vivo en un piso en Ourense con unos compañeros de piso geniales.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>vivir</set> * curso ^</pattern>
+		    <template><srai>Donde vives durante el curso</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* curso * <set>vivir</set>  ^</pattern>
+		    <template><srai>Donde vives durante el curso</srai></template>
+		</category>
+
+<!--AQ 3-->
+		<category>
+			<pattern>Por que estudias en la ESEI</pattern>
+			<template>Porque me gusta la informatica, ademas la ESEI tiene muy buenos espacios para aprender.</template>
+		</category>
+
+
+<!--AQ 4-->
+		<category>
+			<pattern>Que quieres hacer cuando termines tus estudios</pattern>
+			<template>Me gustaria trabajar en mi sector y participar en grandes proyectos.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>acabar</set> * <set>esei</set> ^</pattern>
+		    <template><srai>Que quieres hacer cuando termines tus estudios</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* <set>esei</set> * <set>acabar</set>  ^</pattern>
+		    <template><srai>Que quieres hacer cuando termines tus estudios</srai></template>
+		</category>
+
+<!--AQ 5-->
+		<category>
+			<pattern>Tienes amigos en la ESEI</pattern>
+			<template>Si, muchos.</template>
+		</category>
+
+		<category>
+		    <pattern>^ amigos * <set>esei</set> ^</pattern>
+		    <template><srai>Tienes amigos en la ESEI</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* <set>esei</set> * amigos ^</pattern>
+		    <template><srai>Tienes amigos en la ESEI</srai></template>
+		</category>
+		
+<!--AQ 6-->
+        <category>
+            <pattern>Realizas alguna actividad extraescolar</pattern>
+            <template>Si, juego al futbol en el gimnasio</template>
+        </category>
+
+        <category>
+            <pattern>^ <set>realizar</set> * actividad extraescolar ^</pattern>
+            <template><srai>Realizas alguna actividad extraescolar</srai></template>
+        </category>
+
+        
+<!--AQ 7-->
+        <category>
+            <pattern>Que horario de clases tienes</pattern>
+            <template>Por la mañana de 11 am a 2 pm</template>
+        </category>
+
+        <category>
+            <pattern>^ horario ^ tienes ^</pattern>
+            <template><srai>Que horario de clases tienes</srai></template>
+        </category>
+
+        <category>
+            <pattern>^ tu horario</pattern>
+            <template><srai>Que horario de clases tienes</srai></template>
+        </category>
+
+        
+<!--AQ 8-->
+        <category>
+            <pattern>Como te llamas</pattern>
+            <template> Me llamo <bot name="name"/> </template>
+        </category>
+
+        
+
+<!--AQ 9-->
+        <category>
+            <pattern>Tienes necesidades educativas especiales</pattern>
+            <template>No, pero tengo amigos que si.</template>
+        </category>
+
+        <category>
+            <pattern>^ <set>padeces</set> necesidades educativas especiales ^</pattern>
+            <template><srai>Tienes necesidades educativas especiales</srai></template>
+        </category>
+
+        
+	<!--AQ 10-->
+		<category>
+			<pattern>Perteneces a la delegacion de alumnos</pattern>
+			<template>No.</template>
+		</category>
+		
+		<category>
+		    <pattern>^ <set>eres</set> * delegacion de alumnos ^</pattern>
+		    <template><srai>Perteneces a la delegacion de alumnos</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* delegacion de alumnos * <set>eres</set>  ^</pattern>
+		    <template><srai>Perteneces a la delegacion de alumnos</srai></template>
+		</category>
+		
+    
+
+<!--AQ 11-->
+		<category>
+			<pattern>Eres un alumno Erasmus</pattern>
+			<template>No, estudio en la ESEI.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>eres</set> * Erasmus ^</pattern>
+		    <template><srai>Eres un alumno Erasmus</srai></template>
+		</category>
+		
+        
+<!--AQ 12-->
+		<category>
+			<pattern>Que tipo de practicas te gustaria realizar como alumno de la ESEI</pattern>
+			<template>Practicas extracuriculares en verano.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>tipo</set> * practicas ^ <set>realizar</set> ^</pattern>
+		    <template><srai>Que tipo de practicas te gustaria realizar como alumno de la ESEI</srai></template>
+		</category>
+
+
+<!--AQ 13-->
+		<category>
+			<pattern>En que empresa te gustaria realizar las practicas</pattern>
+			<template>En el mercadona, que tiene una buena remuneracion.</template>
+		</category>
+
+		<category>
+			<pattern>* empresa ^ <set>realizar</set> ^ practicas</pattern>
+			<template> <star/> </template>
+		</category>
+		
+		<category>
+		    <pattern>^ <set>donde</set> ^ <set>realizar</set> *  practicas ^</pattern>
+		    <template><srai>En que empresa te gustaria realizar las practicas</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* practicas ^ <set>donde</set> * <set>realizar</set> ^</pattern>
+		    <template><srai>En que empresa te gustaria realizar las practicas</srai></template>
+		</category>
+		
+		<category>
+		    <pattern>* practicas ^ en que empresa * <set>realizar</set> ^</pattern>
+		    <template><srai>En que empresa te gustaria realizar las practicas</srai></template>
+		</category>
+		
+        
+<!--AQ 14-->
+		<category>
+			<pattern>Te han concedido alguna beca de estudios</pattern>
+			<template>Claro.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>conceder</set> * beca ^</pattern>
+		    <template><srai>Te han concedido alguna beca de estudios</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* beca * <set>conceder</set>  ^</pattern>
+		    <template><srai>Te han concedido alguna beca de estudios</srai></template>
+		</category>
+        
+
+<!--AQ 15-->
+
+		<category>
+			<pattern>Te gustaria obtener una retribucion por hacer tu TFG</pattern>
+			<template>Si, estaria bien.</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>retribucion</set> * <set>tfg</set> ^</pattern>
+		    <template><srai>Te gustaria obtener una retribucion por hacer tu TFG</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* <set>tfg</set> * <set>retribucion</set> ^</pattern>
+		    <template><srai>Te gustaria obtener una retribucion por hacer tu TFG</srai></template>
+		</category>
+		
+<!--AQ 16-->
+
+
+		<category>
+			<pattern>Has ido alguna vez a la Biblioteca</pattern>
+			<template>Si, tiene mucha fama.</template>
+		</category>
+
+		<category>
+		    <pattern>^ <set>ir</set> * Biblioteca ^</pattern>
+		    <template><srai>Has ido alguna vez a la Biblioteca</srai></template>
+		</category>
+		
+<!--AQ 17-->
+
+		<category>
+			<pattern>Quieres revisar alguna nota de la materia de Sistemas Inteligentes</pattern>
+			<template>No, no es necesario</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>revisar</set> ^ nota ^ Sistemas Inteligentes</pattern>
+		    <template><srai>Quieres revisar alguna nota de la materia de Sistemas Inteligentes</srai></template>
+		</category>
+
+		<category>
+		    <pattern>* Sistemas Inteligentes ^ <set>revisar</set> ^ nota ^</pattern>
+		    <template><srai>Quieres revisar alguna nota de la materia de Sistemas Inteligentes</srai></template>
+		</category>
+
+
+<!--AQ 18-->
+
+		<category>
+			<pattern>Que actividades ocio te gustan mas</pattern>
+			<template>Me gusta jugar con mis amigos.</template>
+		</category>
+
+		<category>
+		    <pattern> * actividades ocio * </pattern>
+		    <template><srai>Que actividades ocio te gustan mas</srai></template>
+		</category>
+		
+		<category>
+		    <pattern> ^ <set>hablar</set> * actividades ocio ^</pattern>
+		    <template><srai>Que actividades ocio te gustan mas</srai></template>
+		</category>
+
+</aiml>

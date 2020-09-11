@@ -1,0 +1,3 @@
+materialyservicio:www.esei.uvigo.es/a-esei/recursos-materiais-e-servizos/aulas-laboratorios-seminarios-e-despachos/
+deportes:www.campusactivo.uvigo.gal/campusactivo/publica/actividad/lista.xhtml?tagsobligatorios=false&idstags=10&estados=PENDIENTE_INICIO%2CEN_CURSO
+esei:www.esei.uvigo.es

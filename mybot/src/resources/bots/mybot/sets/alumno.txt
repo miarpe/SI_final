@@ -1,0 +1,4 @@
+estudiante
+estudiantes
+alumno
+alumnos

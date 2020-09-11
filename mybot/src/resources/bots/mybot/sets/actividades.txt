@@ -1,0 +1,6 @@
+badminton
+futbol gaelico
+rugby
+tenis
+volleybol
+ajedrez

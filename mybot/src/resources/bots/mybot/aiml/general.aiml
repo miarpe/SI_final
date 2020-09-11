@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!--Pregunta n1 --> 
+
+		<category>
+			<pattern>Hablame un poco sobre la Universidad de Vigo</pattern>
+			<template>La Universidade de Vigo es una institución joven y dinámica que te ofrece una gran oferta formativa en los tres campus especializados e innovadores que la conforman.</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>hablar</set> * <set>uvigo</set></pattern>
+		    <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            </think>
+            Quieres saber informacion sobre la uvigo?
+			</template>
+		</category>
+		
+		<category>
+		    <pattern>* <set>uvigo</set> * <set>hablar</set></pattern>
+		    <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            </think>
+            Quieres saber informacion sobre la uvigo?
+			</template>
+		</category>
+
+		<category>
+            <pattern><get name="preguntas"/></pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            </think>
+            Quieres saber informacion sobre la uvigo?
+			</template>
+        </category>
+
+		<category>
+		    <pattern>* <set>uvigo</set></pattern>
+		    <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/></set>
+            </think>
+            Quieres saber informacion sobre la uvigo?
+			</template>
+		</category>
+
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre la uvigo</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Hablame un poco sobre la Universidad de Vigo</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Hablame un poco sobre la Universidad de Vigo</srai>
+            </template>
+        </category>
+
+
+<!--Pregunta n2--> 
+
+		<category>
+		    <pattern>Donde se encuentra la ESEI</pattern>
+		    <template>La ESEI se encuentra en el Edificio Politécnico de Ourense, en As Lagoas, Ourense</template>
+		</category>	
+
+		<category>
+		    <pattern>Sabes * <set>donde</set> * <set>esei</set></pattern>
+		   <template>
+			<think> 
+				<set name="var1">Sabes <star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+			</think>
+				Quieres saber donde se encuentra la esei?
+		</template>
+		</category>	
+
+		<category>
+		    <pattern><set>saber</set> * <set>donde</set> * <set>esei</set></pattern>
+		   <template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></set>
+			</think>
+				Quieres saber donde se encuentra la esei?
+		</template>
+		</category>	
+
+
+		<category>
+		    <pattern>* indicas <set>donde</set> * <set>esei</set></pattern>
+		   <template>
+			<think> 
+				<set name="var1"><star/> indicas <star index="2"/> <star index="3"/> <star index="4"/></set>
+			</think>
+				Quieres saber donde se encuentra la esei?
+		</template>
+		</category>	
+
+
+		<category>
+		    <pattern>* <set>lugar</set> * <set>esei</set> * <set>esei</set></pattern>
+		   <template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/></set>
+			</think>
+				Quieres saber donde se encuentra la esei?
+		</template>
+		</category>	
+
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+		<template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/></set>
+			</think>
+				Quieres saber donde se encuentra la esei?
+		</template>
+		</category>
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber donde se encuentra la esei</that>
+			<template>
+					<learn>
+						<category>
+							<pattern><eval><get name="var1"/></eval></pattern>
+							<template>
+								<srai>Donde se encuentra la ESEI</srai>
+						</template>
+						</category>
+					</learn>
+				<srai>Donde se encuentra la ESEI</srai>
+			</template>
+		</category>
+
+		
+<!--Pregunta n3 -->
+
+
+		<category>
+		    <pattern>Que puedo estudiar en la ESEI</pattern>
+		    <template>En la ESEI puedes estudiar Grado en Ingienería Informática, sus respectivos doctorados y Grado conjunto de ADE + Ingienería Informática.</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>titulos</set> <set>oferta</set> * <set>esei</set> *</pattern>
+		       <template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/></set>
+			</think>
+				Quieres saber que puedes estudiar en la ESEI?
+		</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>titulos</set> <set>oferta</set> * <set>esei</set></pattern>
+		       <template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></set>
+			</think>
+				Quieres saber que puedes estudiar en la ESEI?
+		</template>
+		</category>
+
+
+		<category>
+		    <pattern>* carreras vinculadas * <set>esei</set></pattern>
+		       <template>
+			<think> 
+				<set name="var1"><star/> carreras vinculadas <star index="2"/> <star index="3"/> </set>
+			</think>
+				Quieres saber que puedes estudiar en la ESEI?
+		</template>
+		</category>
+
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/></set>
+			</think>
+				Quieres saber que puedes estudiar en la ESEI?
+		</template>
+		</category>
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber que puedes estudiar en la ESEI</that>
+			<template>
+					<learn>
+						<category>
+							<pattern><eval><get name="var1"/></eval></pattern>
+							<template>
+								<srai>Que puedo estudiar en la ESEI</srai>
+						</template>
+						</category>
+					</learn>
+				<srai>Que puedo estudiar en la ESEI</srai>
+			</template>
+		</category>
+
+
+<!--Pregunta n4 no se podria utilizar por qué (con tilde)-->
+
+
+		<category>
+		    <pattern>Por que merece la pena estudiar en la ESEI</pattern>
+		    <template>La ESEI es un buen lugar para tus estudios de informática, esta tiene buenas instalaciones y buenos profesores.</template>
+		</category>
+
+		<category>
+		    <pattern>* atractivo <set>estudiar</set> * <set>esei</set></pattern>
+		    <template>
+			<think> 
+				<set name="var1"><star/> atractivo <star index="2"/> <star index="3"/> <star index="4"/></set>
+			</think>
+				Quieres saber por que merece la pena estudiar en la ESEI?
+		</template>
+		</category>
+
+
+		<category>
+		    <pattern>* mejor <set>estudiar</set> * <set>esei</set> * otros centros</pattern>
+		    <template>
+			<think> 
+				<set name="var1"><star/> mejor <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> otros centros</set>
+			</think>
+				Quieres saber por que merece la pena estudiar en la ESEI?
+		</template>
+		</category>
+
+
+		<category>
+		    <pattern>* <set>oferta</set> * <set>esei</set> * <set>estudiar</set> *</pattern>
+		    <template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/> <star index="7"/></set>
+			</think>
+				Quieres saber por que merece la pena estudiar en la ESEI?
+		</template>
+		</category>
+
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template>
+			<think> 
+				<set name="var1"><star/> <star index="2"/></set>
+			</think>
+				Quieres saber por que merece la pena estudiar en la ESEI?
+			</template>
+		</category>
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber por que merece la pena estudiar en la ESEI</that>
+			<template>
+					<learn>
+						<category>
+							<pattern><eval><get name="var1"/></eval></pattern>
+							<template>
+								<srai>Por que merece la pena estudiar en la ESEI</srai>
+						</template>
+						</category>
+					</learn>
+				<srai>Por que merece la pena estudiar en la ESEI</srai>
+			</template>
+		</category>
+<!--Pregunta n5 -->
+
+        <category>
+            <pattern>Hay una cafeteria en la ESEI</pattern>
+            <template>Si, hay una cafeteria</template>
+        </category>
+
+        <category>
+            <pattern>* cafeteria * <set>esei</set></pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> cafeteria <star index="2"/> <star index="3"/></set>
+            </think>
+                Quieres saber informacion sobre la cafeteria?
+            </template>
+        </category>
+
+        <category>
+            <pattern>* <set>esei</set> * cafeteria</pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> cafeteria <star index="2"/> <star index="3"/></set>
+            </think>
+                Quieres saber informacion sobre la cafeteria?
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ <set>comer</set> *</pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/> <star index="3"/></set>
+            </think>
+                Quieres saber informacion sobre la cafeteria?
+            </template>
+        </category>
+
+        <category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Hay una cafeteria en la ESEI</srai></template>
+        </category>
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre la cafeteria</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Hay una cafeteria en la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Hay una cafeteria en la ESEI</srai>
+            </template>
+        </category>
+
+<!--Pregunta n6 le añadimos más prioridad para que cuando se ponga donde queda no entre por donde queda la esei-->
+
+		<category>
+            <pattern>Donde se encuentra la Secretaria de la ESEI</pattern>
+            <template>Puede ser visible desde la sala que hay después de entrar por una de las puertas principales de la ESEI.</template>
+        </category>
+
+        <category>
+            <pattern>* <set>donde</set> * secretaria * <set>esei</set></pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> <star index="2"/> <star index="3"/> secretaria <star index="4"/> <star index="5"/></set>
+            </think>
+                Quieres saber donde se encuentra la secretaria de la ESEI?
+            </template>
+        </category>
+
+        <category>
+            <pattern><set>donde</set> * <set>realizar</set> * tramites administrativos * <set>esei</set></pattern>
+            <template>
+            <think> 
+                <set name="var1"><star/> indicas <star index="2"/> <star index="3"/> <star index="4"/> tramites administrativos <star index="5"/> <star index="6"/></set>
+            </think>
+                Quieres saber donde se encuentra la secretaria de la ESEI?
+        </template>
+        </category>
+
+        <category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Donde se encuentra la Secretaria de la ESEI</srai></template>
+        </category>
+
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber donde se encuentra la secretaria de la ESEI</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Donde se encuentra la Secretaria de la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Donde se encuentra la Secretaria de la ESEI</srai>
+            </template>
+        </category>
+
+<!--Pregunta n7 Se contempla "cual es el horario", "que horario" y "del centro" o "de la esei".-->	
+
+		<category>
+            <pattern>Que horario de atencion al publico tiene la secretaria del centro</pattern>
+            <template>De lunes a viernes de 9h a 14h.</template>
+		</category>
+
+		<category>
+		    <pattern>* horario * secretaria * <set>esei</set></pattern>
+            <template>
+            <think> 
+				<set name="var1"><star/> horario <star index="2"/> secretaria <star index="3"/> <star index="4"/></set>
+            </think>
+                Quieres saber informacion sobre el horario de la secretaria del centro?
+			</template>
+		</category>
+
+		<category>
+		    <pattern>* hora * secretaria * <set>esei</set> * </pattern>
+		    <template>
+            <think> 
+				<set name="var1"><star/> hora <star index="2"/> secretaria <star index="3"/> <star index="4"/> <star index="5"/></set>
+            </think>
+                Quieres saber informacion sobre el horario de la secretaria del centro?
+			</template>
+		</category>
+		
+		<category>
+		    <pattern>cuando * secretaria * <set>esei</set></pattern>
+		    <template>
+            <think> 
+                <set name="var1">cuando <star/> secretaria <star index="2"/> <star index="3"/></set>
+            </think>
+                Quieres saber informacion sobre el horario de la secretaria del centro?
+			</template>
+		</category>
+		
+		<category>
+		    <pattern>* matricula </pattern>
+		    <template>
+            <think> 
+                <set name="var1"><star/> matricula </set>
+            </think>
+                Quieres saber informacion sobre el horario de la secretaria del centro?
+			</template>
+		</category>
+
+		<category>
+		    <pattern>* matricula *</pattern>
+		    <template>
+            <think> 
+                <set name="var1"><star/> matricula <star index="2"/></set>
+            </think>
+                Quieres saber informacion sobre el horario de la secretaria del centro?
+			</template>
+		</category>
+
+		<category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Que horario de atencion al publico tiene la secretaria del centro</srai></template>
+        </category>
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre el horario de la secretaria del centro</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Que horario de atencion al publico tiene la secretaria del centro</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Que horario de atencion al publico tiene la secretaria del centro</srai>
+            </template>
+        </category>
+		
+		<!--Pregunta n8 -->
+
+		<category>
+            <pattern>En que consiste el PAT</pattern>
+            <template>El PAT proporciona un apoyo y guia de un tutor en los diversos problemas o dudas que puedan tener los estudiantes de primer año.</template>
+		</category>
+		
+		<category>
+		    <pattern>* pat</pattern>
+			<template>
+            <think> 
+				<set name="var1"><star/> pat </set>
+            </think>
+                Quieres saber informacion sobre el pat?
+			</template>
+		</category>
+		
+		<category>
+		    <pattern>* pat *</pattern>
+			<template>
+            <think> 
+				<set name="var1"><star/> pat <star index="2"/> </set>
+            </think>
+                Quieres saber informacion sobre el pat?
+			</template>
+		</category>
+		
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+		    <template><srai>En que consiste el PAT</srai></template>
+		</category>
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre el pat</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>En que consiste el PAT</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>En que consiste el PAT</srai>
+            </template>
+        </category>
+
+		<!--Pregunta n9 -->
+
+		<category>
+            <pattern>Cual es el protocolo de acogida de alumnos con necesidades educativas especiales</pattern>
+            <template>Existen diferentes necesidades educativas especiales, y la esei cuenta con ayuda tanto para causas físicas, como rampas y varios ascensores, como para causas socio-familiares, con ayudas económicas.</template>
+		</category>
+
+		<category>
+		    <pattern>* necesidades educativas especiales</pattern>
+			<template>
+            <think> 
+				<set name="var1"><star/> necesidades educativas especiales</set>
+            </think>
+                Quieres saber informacion sobre las necesidades educativas especiales?
+			</template>
+		</category>
+
+		<category>
+		    <pattern>* protocolo de acogida *</pattern>
+			<template>
+            <think> 
+				<set name="var1"><star/> protocolo de acogida <star index="2"/></set>
+            </think>
+                Quieres saber informacion sobre las necesidades educativas especiales?
+			</template>
+		</category>
+
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+		    <template><srai>Cual es el protocolo de acogida de alumnos con necesidades educativas especiales</srai></template>
+		</category>
+		
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre las necesidades educativas especiales</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Cual es el protocolo de acogida de alumnos con necesidades educativas especiales</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Cual es el protocolo de acogida de alumnos con necesidades educativas especiales</srai>
+            </template>
+        </category>
+
+		
+		<!--Pregunta n10 --> 
+
+		<category>
+            <pattern>Existe una delegacion de alumnos en la ESEI</pattern>
+            <template>Sí, esta se llama ESEIDA</template>
+        </category>
+
+		<category>
+		    <pattern><set>existe</set> * <set>delegacion</set> de <set>alumno</set></pattern>
+		    <template>
+            <think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> de <star index="4"/></set>
+            </think>
+                Quieres saber informacion sobre la delegacion de alumnos en la ESEI?
+			</template>
+		</category>
+
+		<category>
+		    <pattern><set>existe</set> * <set>delegacion</set> de <set>alumno</set> *</pattern>
+		    <template>
+            <think> 
+				<set name="var1"><star/> <star index="2"/> <star index="3"/> de <star index="4"/> <star index="5"/></set>
+            </think>
+                Quieres saber informacion sobre la delegacion de alumnos en la ESEI?
+			</template>
+		</category>
+		
+		<category>
+		    <pattern><set>existe</set> <set>delegacion</set> de <set>alumno</set> *</pattern>
+		    <template>
+            <think> 
+				<set name="var1"><star/> <star index="2"/> de <star index="3"/> <star index="4"/></set>
+            </think>
+                Quieres saber informacion sobre la delegacion de alumnos en la ESEI?
+			</template>
+		</category>
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+		    <template><srai>Existe una delegacion de alumnos en la ESEI</srai></template>
+		</category>
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre la delegacion de alumnos en la ESEI</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Existe una delegacion de alumnos en la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Existe una delegacion de alumnos en la ESEI</srai>
+            </template>
+        </category>
+		<!-- n11  <srai> ^ que es ^ <set>suplemento</set> ^ </srai> (unico SRAI que da error) -->
+
+		<category>
+            <pattern>Que es el suplemento europeo al titulo</pattern>
+            <template>El Suplemento Europeo al Título (SET) es un documento que acompaña a los títulos universitarios de carácter oficial y validez en todo el territorio nacional, con información unificada para toda Europa, personalizada para cada titulado universitario, sobre los estudios cursados, los resultados obtenidos, las capacidades profesionales adquiridas y el nivel de su titulación en el sistema nacional de educación superior.</template>
+        </category>
+		
+		<category>
+		    <pattern>* <set>suplemento</set></pattern>
+			<template>
+            <think> 
+				<set name="var1"><star/> <star index="2"/></set>
+            </think>
+                Quieres saber informacion sobre el suplemento europeo al titulo?
+			</template>
+		</category>
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template><srai>Que es el suplemento europeo al titulo</srai></template>
+		</category>
+
+        <category>
+            <pattern>si</pattern>
+            <that>Quieres saber informacion sobre el suplemento europeo al titulo</that>
+            <template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Que es el suplemento europeo al titulo</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Que es el suplemento europeo al titulo</srai>
+            </template>
+        </category>
+		
+		<!-- n12 Qué tipo de prácticas puedo realizar como alumno de la ESEI?  -->
+
+		<category>
+            <pattern>Que tipo de practicas puedo realizar como alumno de la ESEI</pattern>
+            <template>En la esei hay dos tipos de prácticas, curricaleres que cuentan como créditos y se realizan en el segundo cuatrimestre de cuarto, y las extracurriculares que se realizan en verano, pero no cuentan como créditos.</template>
+        </category>
+
+		<category>
+			<pattern>* practicas * <set>puedo</set> * </pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> practicas <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber el tipo de practicas que puedes realizar como alumno?
+            </template>
+		</category>
+
+		<category>
+			<pattern><set>puedo</set> * practicas * </pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> practicas <star index="3"/></set>
+            	</think>
+            	Quieres saber el tipo de practicas que puedes realizar como alumno?
+            </template>
+		</category>
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template><srai>Que tipo de practicas puedo realizar como alumno de la ESEI</srai></template>
+		</category>
+
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber el tipo de practicas que puedes realizar como alumno</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Que tipo de practicas puedo realizar como alumno de la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Que tipo de practicas puedo realizar como alumno de la ESEI</srai>
+            </template>
+		</category>
+
+
+
+		<!--N13 ¿Dónde puedo consultar la oferta de prácticas en empresas? --> 
+
+		<category>
+            <pattern>Donde puedo consultar la oferta de practicas en empresas</pattern>
+            <template>Deberias mirar la pagina https://esei.uvigo.es/a-esei/formularios/practicas-en-empresa/</template>
+        </category>
+
+		<category>
+			<pattern>hay * practicas * <set>empresa</set> *</pattern>
+			<template>
+				<think>
+					 <set name="var1">hay <star/> practicas <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber la oferta de practicas en empresa?
+            </template>
+		</category>
+		
+		<category>
+			<pattern>* <set>consultar</set> * <set>empresa</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber la oferta de practicas en empresa?
+            </template>
+		</category>
+		
+		<category>
+			<pattern>* <set>consultar</set> * <set>empresa</set> *</pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></set>
+            	</think>
+            	Quieres saber la oferta de practicas en empresa?
+            </template>
+		</category>
+	
+		<category>
+			<pattern>* se * <set>empresa</set> *</pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> se <star index="2"/> <star index="3"/> <star index="4"/> </set>
+            	</think>
+            	Quieres saber la oferta de practicas en empresa?
+            </template>
+		</category>
+		
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template><srai>Donde puedo consultar la oferta de practicas en empresas</srai></template>
+		</category>
+
+		
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber la oferta de practicas en empresa</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Donde puedo consultar la oferta de practicas en empresas</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Donde puedo consultar la oferta de practicas en empresas</srai>
+            </template>
+		</category>
+		
+
+
+		<!--n14 ¿Con qué recursos materiales y servicios cuenta la ESEI? -->
+
+		<category>
+			<pattern>Con que recursos materiales y servicios cuenta la ESEI</pattern>
+			<template>La esei cuenta con aulas, laboratorios, seminarios y despachos, correo electronico y redes wireless. Para mas info consulta <map name="links">materialyservicio</map></template>
+		</category>
+
+		<category>
+			<pattern>* recursos materiales * <set>esei</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> recursos materiales <star index="2"/> <star index="3"/></set>
+            	</think>
+            	Quieres saber con que recursos materiales y servicios cuenta la esei?
+            </template>
+		</category>
+
+		<category>
+			<pattern>* servicios * <set>esei</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> servicios <star index="2"/> <star index="3"/></set>
+            	</think>
+            	Quieres saber con que recursos materiales y servicios cuenta la esei?
+            </template>
+		</category>
+
+		<category>
+			<pattern>* <set>instalaciones</set> * <set>esei</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber con que recursos materiales y servicios cuenta la esei?
+            </template>
+		</category>
+
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template><srai>Con que recursos materiales y servicios cuenta la ESEI</srai></template>
+		</category>
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber con que recursos materiales y servicios cuenta la esei</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Con que recursos materiales y servicios cuenta la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Con que recursos materiales y servicios cuenta la ESEI</srai>
+            </template>
+		</category>
+	
+<!-- n15 ¿Qué son los Trabajos Fin de Grado o de Máster? -->
+
+		<category>
+            <pattern>Que son los Trabajos Fin de Grado o de Master</pattern>
+			<template>Es un trabajo presentando como proyecto final, guiado por un profesor en el último año, para poder conseguir el título.</template>
+		</category>
+
+		<category>
+		    <pattern>* <set>hablar</set> * <set>tfg</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber que son los trabajos de fin de grado o master?
+            </template>
+		</category>
+		
+		<category>
+		    <pattern><set>hablar</set> * <set>tfg</set></pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/></set>
+            	</think>
+            	Quieres saber que son los trabajos de fin de grado o master?
+            </template>
+		</category>
+
+		<category>
+		    <pattern>* <set>tfg</set> * <set>hablar</set></pattern>
+		    <template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber que son los trabajos de fin de grado o master?
+            </template>
+		</category>
+		
+		<category>
+		    <pattern>que * <set>tfg</set> * <set>tfg</set></pattern>
+		    <template>
+				<think>
+					 <set name="var1">que <star/> <star index="2"/> <star index="3"/> <star index="4"/></set>
+            	</think>
+            	Quieres saber que son los trabajos de fin de grado o master?
+            </template>
+		</category>
+
+		<category>
+		    <pattern>* normativa * <set>tfg</set></pattern>
+		    <template>
+				<think>
+					 <set name="var1"><star/> norativa <star index="2"/> <star index="3"/></set>
+            	</think>
+            	Quieres saber que son los trabajos de fin de grado o master?
+            </template>
+		</category>
+			
+		<category>
+			<pattern><get name="preguntas"/></pattern>
+			<template><srai>Que son los Trabajos Fin de Grado o de Master</srai></template>
+		</category>
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber que son los trabajos de fin de grado o master</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Que son los Trabajos Fin de Grado o de Master</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Que son los Trabajos Fin de Grado o de Master</srai>
+            </template>
+		</category>
+
+		<!-- n16 ¿Cómo hago para acceder a la Biblioteca?  -->
+		<category>
+			<pattern>Como hago para acceder a la Biblioteca</pattern>
+			<template>Desde el campus norte/sur se puede encontrar junto a unos jardines.</template>
+		</category>
+
+		<category>
+			<pattern>* <set>acceder</set> * biblioteca *</pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> biblioteca <star index="4"/></set>
+            	</think>
+            	Quieres saber como puedes haceder para acceder a la biblioteca?
+            </template>
+		</category>
+
+		<category>
+			<pattern>* <set>acceder</set> * biblioteca</pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/> biblioteca</set>
+            	</think>
+            	Quieres saber como puedes haceder para acceder a la biblioteca?
+            </template>
+		</category>
+		
+		<category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Como hago para acceder a la Biblioteca</srai></template>
+        </category>
+
+	<category>
+			<pattern>si</pattern>
+			<that>Quieres saber como puedes haceder para acceder a la biblioteca</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Como hago para acceder a la Biblioteca</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Como hago para acceder a la Biblioteca</srai>
+            </template>
+		</category>
+
+
+	<!-- n17 ¿Cómo puedo justificar mi asistencia a las actividades de evaluación y a sus revisiones?  -->
+
+		 <category>
+            <pattern>Como puedo justificar mi asistencia a las actividades de evaluacion y a sus revisiones</pattern>
+            <template>Con tu firma y DNI.</template>
+        </category>
+
+		<category>
+			<pattern>* <set>justificar</set> * asistencia *</pattern>
+			<template><srai>Como puedo justificar mi asistencia a las actividades de evaluacion y a sus revisiones</srai></template>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/><star index="4"/></set>
+            	</think>
+            	Quieres saber como puedes justificar tu asistencia?
+            </template>
+		</category>
+
+		
+		<category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Como puedo justificar mi asistencia a las actividades de evaluacion y a sus revisiones</srai></template>
+        </category>
+
+	<category>
+			<pattern>si</pattern>
+			<that>Quieres saber como puedes justificar tu asistencia</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Como puedo justificar mi asistencia a las actividades de evaluacion y a sus revisiones</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Como puedo justificar mi asistencia a las actividades de evaluacion y a sus revisiones</srai>
+            </template>
+		</category>
+
+
+	
+	<!-- n18 ¿Qué actividades deportivas ofrece la ESEI? -->
+
+		<category>
+			<pattern>Que actividades deportivas ofrece la ESEI</pattern>
+			<template>En la uvigo se ofrecen numerosas actividades deportivas como <map name="deportes">deportes</map>. Para mas info consulta <map name="links">deportes</map></template>
+		</category>
+
+		<category>
+			<pattern>* <set>deporte</set> *</pattern>
+			<template>
+				<think>
+					 <set name="var1"><star/> <star index="2"/> <star index="3"/></set>
+            	</think>
+            	Quieres saber que actividades deportivas ofrece la esei?
+            </template>
+		</category>
+
+
+		<category>
+            <pattern><get name="preguntas"/></pattern>
+            <template><srai>Que actividades deportivas ofrece la ESEI</srai></template>
+        </category>
+
+
+		<category>
+			<pattern>si</pattern>
+			<that>Quieres saber que actividades deportivas ofrece la esei</that>
+			<template>
+                    <learn>
+                        <category>
+                            <pattern><eval><get name="var1"/></eval></pattern>
+                            <template>
+                                <srai>Que actividades deportivas ofrece la ESEI</srai>
+                        </template>
+                        </category>
+                    </learn>
+                <srai>Que actividades deportivas ofrece la ESEI</srai>
+            </template>
+		</category>
+
+
+		
+
+		<!-- auxiliar -->
+		
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<think>
+					<set var="palabra"><star/></set>
+				</think>
+				<condition var="palabra">
+					<li value="NORESP">
+						<think>
+							<set var="toret">Vamos preguntame algo sobre la esei</set>
+						</think>
+					</li>
+					<li>
+						<think>
+							<set var="toret">No se <star/>, deberias mirar en la pagina oficial de la esei: <map name="links">esei</map></set>
+						</think>
+					</li>
+				</condition>
+				<get var="toret"/>
+			</template>
+		</category>
+		
+</aiml>

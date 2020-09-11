@@ -1,0 +1,7 @@
+url:https://esei.uvigo.es/
+name:MyBot
+email:mybot@gmail.com
+gender:male
+botmaster:Miguel Arias Pérez, Jorge Manuel Lozano Gómez, Gabriel Rodriguez Vidal
+organization:ESEI
+version:0.0.1
